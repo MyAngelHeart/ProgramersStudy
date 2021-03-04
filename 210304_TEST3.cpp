@@ -28,16 +28,28 @@ struct WayData
 Road BestWay(vector<vector<int>> board);
 int Cost(Road RoadData);
 
-int solution(vector<vector<int>> board) 
+int main() 
 {    
-    return Cost(BestWay(board));
+    vector<vector<int>> board;
+    
+    board.push_back(vector<int>(5));
+    board.push_back(vector<int>(5));
+    board.push_back(vector<int>(5));
+    board.push_back(vector<int>(5));
+    board.push_back(vector<int>(5));
+    
+    Cost(BestWay(board));
+    
+    return 0;
 }
 
 Road BestWay(vector<vector<int>> board)
 {
     Road RoadData;
+    RoadData.Straight = 0;
+    RoadData.Corner = 0;
     WayData WayData;
-    Dicrection Dic;
+    Dicrection Dic = Right;
     WayData.SizeX = board[0].size();
     WayData.SizeY = board.size();
     WayData.LocationX = 0;
@@ -56,18 +68,20 @@ Road BestWay(vector<vector<int>> board)
         TempDown = 0;
         TempLocationX = WayData.LocationX + 1;
         TempLocationY = WayData.LocationY;
-        while(TempLocationX > WayData.SizeX - 1 || board[TempLocationY][TempLocationX] != 1)
+        while(TempLocationX <= WayData.SizeX - 1 && board[TempLocationY][TempLocationX] != 1)
         {
             TempRight++;
             TempLocationX++;
+            cout<<"TestRight"<<endl;
         }
 
         TempLocationX = WayData.LocationX;
         TempLocationY = WayData.LocationY + 1;
-        while(TempLocationY > WayData.SizeY - 1 || board[TempLocationY][TempLocationX] != 1)
+        while(TempLocationY <= WayData.SizeY - 1 && board[TempLocationY][TempLocationX] != 1)
         {
             TempDown++;
             TempLocationY++;
+            cout<<"TestDown"<<endl;
         }
 
         if(TempRight > TempDown)
@@ -110,6 +124,8 @@ int Cost(Road RoadData)
     
     Cost += 100 * RoadData.Straight;
     Cost += 500 * RoadData.Corner;
+    cout<<"결과는 ";
+    cout<<Cost<<endl;
     
     return Cost;
 }
