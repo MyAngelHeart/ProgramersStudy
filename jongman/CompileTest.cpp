@@ -1,3 +1,11 @@
+#include <iostream>
+
+using namespace std;
+//ctrl + alt + c
+//ctrl + alt + r
+
+//tasks.json
+/* 
 {
     "version": "2.0.0",
     "runner": "terminal",
@@ -5,7 +13,7 @@
     "echoCommand": true,
     "presentation" : { "reveal": "always" },
     "tasks": [
-          //C++ ì»´íŒŒì¼
+          //C++ ÄÄÆÄÀÏ
           {
             "label": "save and compile for C++",
             "command": "g++",
@@ -16,8 +24,8 @@
             ],
             "group": "build",
 
-            //ì»´íŒŒì¼ì‹œ ì—ëŸ¬ë¥¼ í¸ì§‘ê¸°ì— ë°˜ì˜
-            //ì°¸ê³ :   https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
+            //ÄÄÆÄÀÏ½Ã ¿¡·¯¸¦ ÆíÁı±â¿¡ ¹İ¿µ
+            //Âü°í:   https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
 
             "problemMatcher": {
                 "fileLocation": [
@@ -36,7 +44,7 @@
                 }
             }
         },
-        //C ì»´íŒŒì¼
+        //C ÄÄÆÄÀÏ
         {
             "label": "save and compile for C",
             "command": "gcc",
@@ -47,8 +55,8 @@
             ],
             "group": "build",
 
-            //ì»´íŒŒì¼ì‹œ ì—ëŸ¬ë¥¼ í¸ì§‘ê¸°ì— ë°˜ì˜
-            //ì°¸ê³ :   https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
+            //ÄÄÆÄÀÏ½Ã ¿¡·¯¸¦ ÆíÁı±â¿¡ ¹İ¿µ
+            //Âü°í:   https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
 
             "problemMatcher": {
                 "fileLocation": [
@@ -67,13 +75,13 @@
                 }
             }
         },
-        // ë°”ì´ë„ˆë¦¬ ì‹¤í–‰(Ubuntu)
+        // ¹ÙÀÌ³Ê¸® ½ÇÇà(Ubuntu)
         // {
         //     "label": "execute",
         //     "command": "${fileDirname}/${fileBasenameNoExtension}",
         //     "group": "test"
         // }
-        // ë°”ì´ë„ˆë¦¬ ì‹¤í–‰(Windows)
+        // ¹ÙÀÌ³Ê¸® ½ÇÇà(Windows)
         {
             "label": "execute",
             "command": "cmd",
@@ -84,4 +92,11 @@
     
         }
     ]
+}
+*/
+
+int main() 
+{
+    cout<<"Test"<<endl;
+    return 0;    
 }
